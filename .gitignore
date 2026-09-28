@@ -1,0 +1,33 @@
+# Dependencies and build output
+node_modules/
+dist/
+release/
+out/
+output/
+
+# Local Electron/user data
+*.log
+*.local
+credentials.json
+settings.json
+history.json
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+*.lnk
+.vscode/
+.idea/
+
+# Temporary test/build artifacts
+crew-world-backup-*/
+coverage/

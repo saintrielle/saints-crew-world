@@ -1,0 +1,24 @@
+{
+  "name": "saints-crew-world",
+  "version": "2.1.0",
+  "description": "A local pixel-world client for real project agents",
+  "main": "main.js",
+  "author": "Saint's Crew",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test *.test.js",
+    "build": "electron-builder --win portable",
+    "build:folder": "electron-builder --win --dir"
+  },
+  "dependencies": { "@anthropic-ai/sdk": "0.124.0" },
+  "devDependencies": { "electron": "44.2.0", "electron-builder": "26.15.3" },
+  "build": {
+    "appId": "com.saint.crew.world.standalone",
+    "productName": "Saints Crew World",
+    "directories": { "output": "../output/crew-world-v2.1" },
+    "files": ["main.js", "preload.js", "codex-engine.js", "api-engine.js", "store.js", "renderer/**/*", "templates/**/*", "assets/**/*", "!renderer/*.cjs", "README.md", "STATE.md", "LICENSE", "package.json"],
+    "npmRebuild": false,
+    "win": { "target": "portable", "icon": "assets/app-icon.ico", "signAndEditExecutable": true, "signExecutable": false }
+  }
+}
